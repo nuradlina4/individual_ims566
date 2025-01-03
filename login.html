@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #F5ECD5, #4E0052);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      background-color: #FFFAEC;
+      color: black;
+      width: 100%;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .auth-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    .btn-custom {
+      background-color: #4E0052;
+      color: #fff;
+    }
+
+    .btn-custom:hover {
+      background-color: #9B6FA3;
+    }
+
+    .title {
+      font-family: "DM Serif Text", serif;
+      font-weight: 500;
+      font-size: 35px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="d-flex align-items-center justify-content-center">
+    <img src="image/logo.png" alt="UiTM Logo" class="me-3" style="height: 60px;">
+    <h1 class="title text-center mb-0">Universiti Teknologi Mara, Kampus Puncak Perdana</h1>
+  </div>
+</div>
+
+<!-- Login Form -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="auth-card">
+        <h3 class="text-center mb-3">Sign In</h3>
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="matricno" class="form-label">Matric Number</label>
+            <input type="text" class="form-control" id="matricno" placeholder="Please enter your matric number">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Please enter your password">
+          </div>
+          <button type="submit" class="btn btn-custom w-100">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Menghalang form daripada dihantar secara default
+    window.location.href = 'index.html';  // Navigasi ke index.html tanpa pengesahan
+  });
+</script>
+
+</body>
+</html>
